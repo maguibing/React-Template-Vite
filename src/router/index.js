@@ -1,4 +1,4 @@
-import Login from '../pages/login/index'
+import Login from '@/pages/login/index'
 
 const routes = [
   {

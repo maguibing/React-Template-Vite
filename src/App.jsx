@@ -2,8 +2,8 @@ import './App.css'
 
 import { Routes, Route, Navigate } from 'react-router'
 
-import Login from './pages/login'
-import NotFound from './pages/404'
+import Login from '@/pages/login'
+import NotFound from '@/pages/404'
 
 function App() {
   return (
