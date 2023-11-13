@@ -1,20 +1,18 @@
 import './App.css'
 
-import { sStorage } from './utils'
+import { Routes, Route, Navigate } from 'react-router'
+
+import Login from './pages/login'
+import NotFound from './pages/404'
 
 function App() {
-
-  const setStorage = () => {
-    sStorage.set('token', '123456')
-  }
-
   return (
     <>
-      <div className="card">
-        <button onClick={setStorage}>
-          测试
-        </button>
-      </div>
+      <Routes>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/' element={<Navigate to={'/login'}/>}></Route>
+        <Route path='*' element={<NotFound />}></Route>
+      </Routes>
     </>
   )
 }
