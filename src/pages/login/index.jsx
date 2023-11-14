@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { increment,incrementByAmount } from '../../store/modules/counterSlice'
+import { increment, incrementByAmount } from '../../store/modules/counterSlice'
 import styles from './index.module.scss'
+import { useRef } from 'react'
 
 
 const Login = () => {
@@ -9,6 +10,8 @@ const Login = () => {
   const store = useSelector(state => state.counter.value)
   console.log(store)
 
+
+  const inputRef = useRef(null)
   // const dispatch = useDispatch()
   // const store = useStore()
 
@@ -18,8 +21,9 @@ const Login = () => {
         <div className='login'>
           {store}
         </div>
-        <button onClick={() => dispatch(increment())}>increment</button>
-        <button onClick={() => dispatch(incrementByAmount(10))}>increment</button>
+        <div>
+          <input type="text" ref={inputRef} />  <button onClick={() => inputRef.current.focus()}>getInputValue</button>
+        </div>
       </div>
     </>
   )
