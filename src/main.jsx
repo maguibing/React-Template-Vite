@@ -9,8 +9,6 @@ import ErrorPage from '@/pages/err'
 import Contact, { loader as contactLoader } from '@/pages/contact'
 import EditContact, { action as editAction } from '@/pages/edit'
 
-
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +31,8 @@ const router = createBrowserRouter([
     ],
   },
 ])
+
+// import { router } from './router'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
